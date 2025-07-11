@@ -1,0 +1,56 @@
+* {
+    color: #E0E0E0;
+}
+
+body {
+    max-width: 90%;
+    background-color: #1C1C1E;
+}
+h1 {
+    color: #CFCFCF;
+}
+
+p {
+    color: #B0B0B0;
+}
+
+input {
+  background-color: #1C1C1E !important;
+  border-color: black !important;
+  color: #e0dbdb !important;
+}
+
+input::placeholder {
+  color:#8f8d8d !important;
+}
+
+/* Modal background */
+#deletionModal .modal-content {
+  background-color: #474747;
+  border-radius: 0.5rem; /* optional: match card radius */
+}
+
+/* Modal header */
+#deletionModal .modal-header {
+  border-bottom: 1px solid #3A3A3A;
+}
+
+/* Modal title */
+#deletionModal .modal-title {
+  color: #F5F5F5;
+}
+
+/* Modal footer */
+#deletionModal .modal-footer {
+  background-color: #2B2B2B;
+  border-top: 1px solid #3A3A3A;
+}
+
+/* Modal buttons */
+#deletionModal .btn-close {
+  filter: invert(1); /* make the close button white */
+}
+
+#deletionModal .modal-body p {
+  color: #E0E0E0 !important;
+}
