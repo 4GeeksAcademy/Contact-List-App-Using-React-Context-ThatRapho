@@ -9,6 +9,17 @@ export const ContactsProvider = ({ children }) => {
 
   const fetchContacts = async () => {
     const res = await fetch("https://playground.4geeks.com/contact/agendas/thatrapho/contacts");
+    if (!res.ok) {
+      console.error("Fetch failed with status:", res.status);
+      console.log("Creating user");
+      await fetch("https://playground.4geeks.com/contact/agendas/thatrapho", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          "slug": "thatrapho",
+        })
+      });
+    }
     const data = await res.json();
     dispatch({ type: FETCH_CONTACTS, payload: data.contacts });
   };
